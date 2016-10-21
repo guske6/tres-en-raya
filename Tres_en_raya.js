@@ -42,6 +42,9 @@ class TresEnRaya{
 	askmove(player){
 		var movec = prompt("Select column(1, 2 or 3): ");
 		var mover = prompt("Select row(1, 2 or 3): ");
+		if (this.tab[movec-1][mover-1] == player){
+			askmove();
+		}
 		this.tab[movec-1][mover-1] = player;
 	}
 	/*

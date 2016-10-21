@@ -24,7 +24,7 @@ class TresEnRaya{
 		} while (ini != 1 && ini != 2);
 		
 		while (this.victory == false) {
-			this.askmove(selectedPlayer); /* funcion para preguntar posiciones */
+			this.askmove(selectedPlayer);
 
 			if (selectedPlayer == 1){
 				console.log("Player 2");
@@ -35,7 +35,7 @@ class TresEnRaya{
 				console.log("Player 1");
 			}
 			
-			this.victorySearch(); /* función para comprobar si la partida está ganada */
+			this.victorySearch(); 
 		}
 		if (selectedPlayer == 1){
 			console.log("Player 1 win");
@@ -46,7 +46,7 @@ class TresEnRaya{
 	}
 	
 	askmove(player){
-		/* funcion para preguntar posiciones */
+		/* function to answer positions of the ticks */
 		var movec = prompt("Select column(1, 2 or 3): ");
 		var mover = prompt("Select row(1, 2 or 3): ");
 		if (this.tab[movec-1][mover-1] == 1 || this.tab[movec-1][mover-1] == -1){
@@ -57,6 +57,7 @@ class TresEnRaya{
 	}
 
 	victorySearch(){
+		/* function to check if the match is over */
 		if (this.tab[0][0]+this.tab[0][1]+this.tab[0][2] == 3 || this.tab[0][0]+this.tab[0][1]+this.tab[0][2] == -3){ this.victory = true }
 		if (this.tab[1][0]+this.tab[1][1]+this.tab[1][2] == 3 || this.tab[1][0]+this.tab[1][1]+this.tab[1][2] == -3){ this.victory = true }
 		if (this.tab[2][0]+this.tab[2][1]+this.tab[2][2] == 3 || this.tab[2][0]+this.tab[2][1]+this.tab[2][2] == -3){ this.victory = true }

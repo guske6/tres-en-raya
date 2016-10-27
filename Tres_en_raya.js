@@ -57,7 +57,7 @@ class TresEnRaya{
 	}
 
 	victorySearch(){
-		/* function to check if the match is over */
+		/* function to check if the match is over*/
 		if (this.tab[0][0]+this.tab[0][1]+this.tab[0][2] == 3 || this.tab[0][0]+this.tab[0][1]+this.tab[0][2] == -3){ this.victory = true }
 		if (this.tab[1][0]+this.tab[1][1]+this.tab[1][2] == 3 || this.tab[1][0]+this.tab[1][1]+this.tab[1][2] == -3){ this.victory = true }
 		if (this.tab[2][0]+this.tab[2][1]+this.tab[2][2] == 3 || this.tab[2][0]+this.tab[2][1]+this.tab[2][2] == -3){ this.victory = true }
